@@ -24,9 +24,10 @@ if player_died.pop
     p player_died
 end
 
-# In these if statements, I will call the .push() variable on the above Array variables.
+# In these variable assignments, I will call the .push() variable on the above Array variables.
 # This will select one Array variable, and add all elements contained within the others 
-# (of course, minus the ones removed with the .pop method) to the end of it's set.
+# (of course, minus the ones removed with the .pop method) to the end of it's set and print each 
+# combination.
 
 # combat_supplies elements first
 cs_first = combat_supplies.push(supplies_amounts, best_times, player_died)
