@@ -50,3 +50,21 @@ p cssabt_add_pd
 # with a name thats more contextually clear
 player_data = cssabt_add_pd
 puts player_data
+
+# Here I'll be working with the .shift() method, which is going to take the newly reassigned 'player_data'
+# variable and will pull out an element in an amount specified by within the method permanently, and give
+# elements in those amounts back to us. 
+
+ puts ".shift() method : #{player_data.shift()}\n\n"
+ p player_data
+ puts ".shift(1) method : #{player_data.shift(1)}\n\n"
+ p player_data 
+ puts ".shift(2) method : #{player_data.shift(2)}\n\n"
+ p player_data 
+ puts ".shift(3) method : #{player_data.shift(3)}\n\n"
+ p player_data 
+
+# Finally, the .unshift() method, will be used to return the elements weve been given
+
+puts ".unshift(3) method : #{player_data.unshift(3)}\n\n"
+ p player_data 
