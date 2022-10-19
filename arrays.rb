@@ -24,28 +24,29 @@ if player_died.pop
     p player_died
 end
 
-# In these variable assignments, I will call the .push() method on the above Array variables.
-# This will select one Array variable, and add all elements contained within the others 
-# (of course, minus the ones removed with the .pop method) to the end of it's set and print each 
-# combination.
+# In these variable assignments, I will call the .push() method on the Array variable 'combat_supplies'.
+# This will select that Array variable as an object, and add all elements (of course, minus the ones removed with the .pop method)
+# of the variable expressed within the .push() method onto the end of it's set. Next, it will print
+# the new list of elements
 
 # combat_supplies elements first
-cs_first = combat_supplies.push(supplies_amounts, best_times, player_died)
-p cs_first
+# Expresses array elements from variable 'supplies_amounts' onto the next available index 
+# of the array (in this case, index 2).
+cs_add_sa = combat_supplies.push(supplies_amounts) #a ssigns .push() method to a new variable
+p cs_add_sa # prints that new variable
 
-# supplies_amounts elements first
-sa_first = supplies_amounts.push(combat_supplies, best_times, player_died)
-p sa_first
+# Expresses array elements from variable 'best_times' onto the next available index
+# of the array (in this case, index 2),which now includes elements from 'combat_supplies',
+# supplies_amounts, and then the new set of elements from 'best_times--In that order.
 
-# best_times elements first
-bt_first = best_times.push(combat_supplies, supplies_amounts, player_died)
-p bt_first
+cssa_add_bt = cs_add_sa.push(best_times)
+p cssa_add_bt
 
-# player_died elements first
-pd_first = player_died.push(combat_supplies, supplies_amounts, best_times)
-p pd_first
+# Similar process as previously, adding elements from 'player_died' to index 3 of the array we've been building
+cssabt_add_pd = cssa_add_bt.push(player_died)
+p cssabt_add_pd
 
-# In these variable assignments, I will call the .shift() method on the above Array variables.
-# These assignments will target index position 0 of each array and remove it from the set,
-# and print the remaining elements of each array.
-
+# Finally, we can just reassign this entire collection of arrays to a new variable 
+# with a name thats more contextually clear
+player_data = cssabt_add_pd
+puts player_data
