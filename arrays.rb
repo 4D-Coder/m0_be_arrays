@@ -64,7 +64,4 @@ puts player_data
  puts ".shift(3) method : #{player_data.shift(3)}\n\n"
  p player_data 
 
-# Finally, the .unshift() method, will be used to return the elements weve been given
-
-puts ".unshift(3) method : #{player_data.unshift(3)}\n\n"
- p player_data 
+# Will continue to update this project
